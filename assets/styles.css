@@ -88,6 +88,14 @@ li {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
 }
 
+.out-of-stock-img {
+<<<<<<< HEAD
+  opacity: 0.5;
+=======
+  opacity:0.5
+>>>>>>> L2-start
+}
+
 p {
   font-size: 22px;
 }
