@@ -6,6 +6,8 @@ const app = Vue.createApp({
 			image: "./assets/images/socks_green.jpg",
 			imageAlt: "a pair of socks, green",
 			url: "http://www.google.com",
+			inventory: 100,
+			onSale: false,
 		};
 	},
 });
