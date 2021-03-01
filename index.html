@@ -37,15 +37,31 @@
               <ul>
                 <li v-for="detail in details">{{detail}}</li>
               </ul>
-              <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{variant.color}}</div>
+              <div 
+              v-for="variant in variants" 
+              :key="variant.id" 
+              @mouseover="updateImage(variant.image)"
+              class="color-circle"
+              :style="{backgroundColor: variant.color}"
+              aria-label="{{variant.color}}"
+              ></div>
               <div v-for="size in sizes" :key="size.id">{{size.size}}</div>
             </div>
-            <button v-if="cart <= 0" class="button"
-            @click="addToCart">Add to Cart</button>
-            <div v-else>
-              <button class="button" @click="addToCart"> + </button>
-              <button class="button" @click="removeFromCart"> - </button>
-            </div>
+            <button 
+            v-if="cart <= 0" 
+            class="button"
+            @click="addToCart"
+            :disabled="!inventory"
+            :class="{ 
+              disabledButton: !inventory 
+            }"
+            >
+            Add to Cart
+            </button>
+            <button class="button" v-else>
+              <span  @click="addToCart"> + </span>
+              <span  @click="removeFromCart"> - </span>
+            </button>
             <a :href="url">Search for more socks!</a>
           </div>
         </div>
