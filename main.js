@@ -3,11 +3,12 @@ const app = Vue.createApp({
 		return {
 			cart: 0,
 			product: "Socks",
+			brand: "Vue Mastery",
 			description: "Fuzzy, warmess for your toes! Available in 2 colors.",
 			image: "./assets/images/socks_green.jpg",
-			imageAlt: "a pair of socks, green",
+			imageAlt: "a pair of socks, in selected color",
 			url: "http://www.google.com",
-			inventory: 100,
+			inventory: 10,
 			onSale: false,
 			details: ["50% cotton", "30% wool", "20% polyester"],
 			variants: [
